@@ -5,7 +5,23 @@ class LinkedList {
   }
 
   append(value) {
-    return this.list.push(value.value);
+    this.list.push(value.value);
+  }
+
+  prepend(value) {
+    this.list.unshift(value.value);
+  }
+
+  size() {
+    return this.list.length;
+  }
+
+  head() {
+    return this.list[0];
+  }
+
+  tail() {
+    return this.list[this.list.length - 1];
   }
 }
 
@@ -22,4 +38,4 @@ const list = new LinkedList();
 
 const node = new Node();
 
-console.log(list.append(node));
+console.log(list.size());
